@@ -28,8 +28,7 @@ jobs:
         #   run: sudo apt-get install -y shellcheck
 
       - name: Test
-        uses: skx/github-action-tester@master
-        run: sudo apt-get install -y shellcheck
+        run: shellcheck "${{ steps.files.outputs.modified }}"
 
 # - name: Shell Linter
 #   # You may pin to the exact commit or the version.
